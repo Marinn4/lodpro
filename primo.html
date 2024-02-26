@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>  
+    <title>primos</title>
+    <meta charset="UTF-8">
+    <script>
+        function recebeNumero(){
+            var canvas=document.getElementById('meuCanvas');
+            if(canvas.getContext){
+                var cntxt = canvas.getContext('2d');
+                var maxWidth = 300;
+                var lineheight =35;
+                var x = (canvas.width - maxwidth)/ 2;
+                var y = 60;
+                var grad = cntxt.createLinearGradient(0, 0, canvas.width, 0);
+                grad.addColorStop(0, "rgb(255, 0, 0)");
+                grad.addColorStop(0.5, "rgb(255, 255, 255)");
+                grad.addColorStop(1, "rgb(0, 0, 0)");
+                 
+                var N1 = parseInt(documemt.getElementById("Numero1").value,10);
+                cntxt.fillStyle = "rgb(255, 255, 255)";
+                cntxt.fillRect (0, 0, canvas.width, canvas.heigth);
+                cntxt.font="30px Comic sans MS";
+                cntxt.fillStyle = grad;
+                primo( cntxt, N1, x, y );
+
+            }
+        }
+        function primo(cntxt, N1, x, y){
+
+        }
+    </script>
+  
+</head>
+<body>
+    <div>
+        <h1>primos</h1>
+        \
+    </div>
+</body>
+</html>
